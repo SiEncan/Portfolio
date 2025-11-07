@@ -135,7 +135,7 @@ export function ProjectGallery({ items, title }: ProjectGalleryProps) {
             <ChevronLeft size={32} />
           </button>
 
-          <div className={`w-full ${title.includes('T-Cash') ? 'max-w-lg mx-auto' : 'max-w-[95vw] md:max-w-[90vw] lg:max-w-[80vw]'}`}>
+          <div className={`w-full ${title.includes('T-Cash') ? 'max-w-[75vw] md:max-w-md lg:max-w-lg mx-auto' : 'max-w-[95vw] md:max-w-[90vw] lg:max-w-[80vw]'}`}>
             <div className="relative w-full flex items-center justify-center">
               {items[selectedIndex].type === "image" ? (
                 <>
