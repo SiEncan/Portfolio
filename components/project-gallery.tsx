@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import type { ProjectGalleryItem } from "@/lib/projects-data"
 
@@ -24,6 +24,13 @@ export function ProjectGallery({ items, title }: ProjectGalleryProps) {
   const goToNext = () => {
     setSelectedIndex((prev) => (prev === null ? 0 : (prev + 1) % items.length))
   }
+
+  useEffect(() => {
+    if (selectedIndex !== null && items[selectedIndex].type === "image") {
+      setIsLoading(true);
+    }
+  }, [selectedIndex]);
+
 
   return (
     <>
@@ -128,25 +135,39 @@ export function ProjectGallery({ items, title }: ProjectGalleryProps) {
             <ChevronLeft size={32} />
           </button>
 
-          <div className={`w-full ${
-            title.includes('T-Cash') ? 'max-w-lg mx-auto' : 'max-w-[95vw] md:max-w-[90vw] lg:max-w-[80vw]'}`}>
-            {items[selectedIndex].type === "image" ? (
-              <div className="relative w-full">
-                <img
+          <div className={`w-full ${title.includes('T-Cash') ? 'max-w-lg mx-auto' : 'max-w-[95vw] md:max-w-[90vw] lg:max-w-[80vw]'}`}>
+            <div className="relative w-full flex items-center justify-center">
+              {items[selectedIndex].type === "image" ? (
+                <>
+                  {isLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
+                      <div className="animate-spin rounded-full h-10 w-10 border-4 border-white border-t-transparent"></div>
+                    </div>
+                  )}
+                  <img
+                    src={items[selectedIndex].src}
+                    alt={items[selectedIndex].alt}
+                    onLoad={() => setIsLoading(false)}
+                    className={`w-full h-auto rounded-lg transition-opacity duration-300 ${
+                      isLoading ? "opacity-0" : "opacity-100"
+                    }`}
+                  />
+                </>
+              ) : (
+                <video
                   src={items[selectedIndex].src}
-                  onLoad={() => setIsLoading(false)}
-                  alt={items[selectedIndex].alt}
+                  controls
+                  autoPlay
                   className="w-full h-auto rounded-lg"
                 />
-                {isLoading && (
-                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-white border-opacity-70"></div>
-                )}
-              </div>
-            ) : (
-              <video src={items[selectedIndex].src} controls autoPlay className="w-full h-auto rounded-lg" />
+              )}
+            </div>
+
+            {items[selectedIndex].title && (
+              <p className="text-white text-center mt-4">{items[selectedIndex].title}</p>
             )}
-            {items[selectedIndex].title && <p className="text-white text-center mt-4">{items[selectedIndex].title}</p>}
           </div>
+
 
           <button onClick={goToNext} className="cursor-pointer absolute right-4 text-white hover:text-gray-300 transition-colors">
             <ChevronRight size={32} />
