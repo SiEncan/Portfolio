@@ -12,6 +12,8 @@ interface ProjectGalleryProps {
 export function ProjectGallery({ items, title }: ProjectGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
 
+  const [isLoading, setIsLoading] = useState(true);
+
   const featuredItems = items.slice(0, 3)
   const additionalItems = items.slice(3)
 
@@ -129,11 +131,17 @@ export function ProjectGallery({ items, title }: ProjectGalleryProps) {
           <div className={`w-full ${
             title.includes('T-Cash') ? 'max-w-lg mx-auto' : 'max-w-[95vw] md:max-w-[90vw] lg:max-w-[80vw]'}`}>
             {items[selectedIndex].type === "image" ? (
-              <img
-                src={items[selectedIndex].src || "/placeholder.svg"}
-                alt={items[selectedIndex].alt || "Gallery item"}
-                className="w-full h-auto rounded-lg"
-              />
+              <div className="relative w-full">
+                <img
+                  src={items[selectedIndex].src}
+                  onLoad={() => setIsLoading(false)}
+                  alt={items[selectedIndex].alt}
+                  className="w-full h-auto rounded-lg"
+                />
+                {isLoading && (
+                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-white border-opacity-70"></div>
+                )}
+              </div>
             ) : (
               <video src={items[selectedIndex].src} controls autoPlay className="w-full h-auto rounded-lg" />
             )}
