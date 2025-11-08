@@ -97,16 +97,16 @@ export function Contact() {
           <div className="space-y-8">
             <div className="space-y-2">
               <h3 className="text-lg font-semibold text-foreground">Email</h3>
-              <a href="mailto:adnanalvitomustaqim@example.com" className="text-foreground/70 hover:text-foreground transition-colors">
-                adnanalvitomustaqim@example.com
+              <a href="mailto:adnanalvitomustaqim@gmail.com" className="text-foreground/70 hover:text-foreground transition-colors">
+                adnanalvitomustaqim@gmail.com
               </a>
             </div>
 
             <div className="space-y-2">
               <h3 className="text-lg font-semibold text-foreground">Social</h3>
               <div className="flex gap-4">
-                <a href="#" className="text-foreground/70 hover:text-foreground transition-colors">
-                  Twitter
+                <a href="https://www.instagram.com/adnanalvito_/" className="text-foreground/70 hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  Instagram
                 </a>
                 <a
                   href="https://www.linkedin.com/in/adnan-alvito-mustaqim-20929335a/" className="text-foreground/70 hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer"

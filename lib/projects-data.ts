@@ -41,23 +41,27 @@ export const projects: Project[] = [
       "💳 Secure payments via Midtrans",
       "🧾 Admin dashboard for managing venues and schedules",
       "🧍 Role-based authentication for owners and customers",
-      "🧱 PostgreSQL + Prisma schema design ready for multi-owner expansion",
-      "🎨 Clean and responsive UI built with Tailwind CSS",
+      "👥 Multi-owner support - Multiple owners can manage their own fields independently.",
+      "📧 Email verification - Integrated Nodemailer to verify user accounts and reduce spam bookings.",
+      "🔑 Google Sign-In - Enabled seamless login without manual registration for a smoother user experience.",
+      "💾 Local storage booking persistence - Preserves ongoing bookings even after page reloads or interruptions, improving user experience."
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
     whatIBuilt: [
-      "Designed a scalable multi-owner architecture",
-      "Created a relational schema using <strong>PostgreSQL + Prisma</strong>",
-      "Developed a dynamic, conflict-free time slot system",
-      "Integrated <strong>Midtrans</strong> payments with security measures",
-      "Added <strong>Nodemailer</strong> for email verification",
-      "Implemented local storage persistence for in-progress bookings",
-      "Enabled <strong>Google Sign-In</strong> for faster user acces"
-    ],
+  "Designed a scalable <strong>multi-owner architecture</strong> using relational models",
+  "Created <strong>PostgreSQL + Prisma</strong> schema for venues, time slots, and bookings",
+  "Implemented <strong>conflict-free dynamic time slot allocation</strong>",
+  "Integrated <strong>Midtrans payments</strong> with server-side security validations",
+  "Configured <strong>Nodemailer</strong> for automated email verification",
+  "Developed <strong>local storage persistence</strong> for in-progress bookings",
+  "Implemented <strong>OAuth 2.0 login via Google Sign-In</strong> for faster user access"
+]
+,
     goals: [
       "Understanding Next.js structure and server-side rendering (SSR)",
       "Writing clean and type-safe code using <strong>TypeScript</strong>",
-      "Practicing clean and modular code architecture"
+      "Practicing clean and modular code architecture",
+      "Learning how to integrate a payment gateway (e.g., Midtrans) into a real-world application"
     ],
     image: "/arenaku-home.png",
     gallery: [
