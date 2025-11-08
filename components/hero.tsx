@@ -42,13 +42,13 @@ export function Hero() {
             <div className="flex flex-wrap gap-3">
               <a
                 href="#projects"
-                className="text-sm md:text-base px-4 md:px-6 py-1.5 md:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all font-medium hover:shadow-lg hover:shadow-primary/20"
+                className="text-sm md:text-base px-4 md:px-6 py-2 md:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all font-medium hover:shadow-lg hover:shadow-primary/20"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="text-sm md:text-base px-3 md:px-6 py-1.5 md:py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-all font-medium"
+                className="text-sm md:text-base px-3 md:px-6 py-2 md:py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-all font-medium"
               >
                 Get in Touch
               </a>
