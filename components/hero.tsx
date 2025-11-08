@@ -10,6 +10,9 @@ export function Hero() {
 
           <div className="space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
+              <p className="text-sm sm:text-base md:text-lg font-semibold text-primary uppercase tracking-widest">
+                Adnan Alvito Mustaqim
+              </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground text-balance leading-tight">
                 Software{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Engineer</span>
@@ -52,7 +55,7 @@ export function Hero() {
           </div>
 
           <div className="order-1 lg:order-2 relative h-96 lg:h-full min-h-96 lg:min-h-[500px]">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-accent/10 shadow-2xl shadow-primary/40 rounded-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-accent/10 shadow-2xl shadow-primary/30 rounded-3xl" />
 
             <div className="absolute inset-0 rounded-3xl overflow-hidden">
               <img src="/profile.png" alt="Profile" className="w-full h-full object-cover mt-5" />
