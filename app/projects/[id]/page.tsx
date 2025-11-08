@@ -90,7 +90,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Featured Image */}
         <div className={`mb-12 rounded-lg overflow-hidden bg-muted ${
-          project.title.includes('T-Cash') ? 'max-w-xs mx-auto' : ''}`}>
+          project.title.includes('T-Cash') ? 'max-w-xs mx-auto' : project.title.includes('Prambors') ? 'max-w-lg mx-auto' : ''}`}>
           <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-auto" />
         </div>
 
@@ -116,7 +116,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {project.keyFeatures && project.keyFeatures.length > 0 && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-foreground mb-4">⚙️ Key Features</h2>
-            <ul className="columns-1 md:columns-2 space-y-1.5">
+            <ul className={`space-y-1.5 ${ project.keyFeatures.length > 4 ? "columns-2 md:columns-2" : "columns-1"}`}
+            >
               {project.keyFeatures.map((feature, index) => (
                 <li key={index} className="break-inside-avoid flex items-start gap-2">
                   <span className="text-primary font-bold mt-0.5">•</span>
@@ -124,6 +125,28 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {/* Additional Info Table */}
+        {project.additionalList && project.additionalList.length > 0 && (
+          <div className="overflow-x-auto mb-8">
+            <table className="min-w-full border border-gray-200 divide-y divide-gray-200">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th className="px-4 py-2 text-left text-gray-700 font-semibold">Label</th>
+                  <th className="px-4 py-2 text-left text-gray-700 font-semibold">Description</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {project.additionalList.map((item, idx) => (
+                  <tr key={idx}>
+                    <td className="px-4 py-2 font-mono text-gray-900">{item.label}</td>
+                    <td className="px-4 py-2 text-gray-700">{item.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
 
@@ -193,6 +216,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   "laravel": "laravel",
                   "php": "php",
                   "mysql": "mysql",
+                  "node.js": "nodejs",
+                  "discord.js": "discordjs",
                   "bladetemplate": "laravel",
                 }
 

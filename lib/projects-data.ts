@@ -21,6 +21,7 @@ export interface Project {
   github?: string
   year: number
   role: string
+  additionalList?: { label: string; value: string }[]
 }
 
 export const projects: Project[] = [
@@ -73,7 +74,7 @@ export const projects: Project[] = [
       { type: "image", src: "/arenaku-kelolavenue.png", alt: "Kelola Venue", title: "Owner - Kelola Venue" },
       { type: "image", src: "/arenaku-editlapangan.png", alt: "Edit Lapangan", title: "Owner - Edit Lapangan" },
     ],
-    year: 2024,
+    year: 2025,
     role: "Full Stack Developer",
     link: "#",
     github: "https://github.com/siencan/ArenaKu",
@@ -188,7 +189,7 @@ export const projects: Project[] = [
       { type: "image", src: "/angelic-manageemployee.png", alt: "Manage Employee Page", title: "Manage Employee Page" },
       { type: "image", src: "/angelic-customerprofile.png", alt: "Customer Profile Page", title: "Customer Profile Page" },
     ],
-    year: 2024,
+    year: 2025,
     role: "Full Stack Developer",
     link: "https://angelic-salonandspa.web.app/",
     github: "https://github.com/siencan/angelic-salon",
@@ -236,52 +237,59 @@ As this project was created during my <strong>second semester</strong>, it mainl
   },
   {
     id: 5,
-    title: "Social Media App",
-    description: "Full-stack social platform with user authentication, posts, and real-time notifications.",
-    longDescription:
-      "A modern social media platform built with Next.js and Supabase. Features include user authentication, post creation and sharing, real-time notifications, user profiles, and social interactions. Designed with a focus on user experience and performance.",
-    techStack: ["Next.js", "Supabase", "React", "Tailwind CSS"],
+    title: "Prambors Radio Discord Bot",
+    description: "A Discord bot that lets users stream Radio Prambors and search song lyrics directly from Discord.",
+    longDescription:`Prambors Discord Bot is a Discord bot that allows users to listen to Radio Prambors Jakarta 102.2FM directly from Discord without opening a browser tab.
+    
+    <strong>📖 Background Story</strong>
+    I first created this bot in 2018, when I was in 9th grade (Junior High School).
+    This project is one of my earliest coding projects and played a major role in keeping me active in programming.
+    At that time, I wanted to bring Radio Prambors from the website to Discord because opening a Chrome tab to listen to the radio was too heavy on my PC, especially when I was gaming.
+
+    The code might look simple now—but remember, it was written by a middle schooler learning only from StackOverflow and YouTube tutorials. It is hosted on Heroku to ensure continuous streaming and uptime.
+
+    Initially, this bot was for personal use with my friends in a private Discord server. However, it quickly gained interest and eventually:
+      • 📌 Deployed in 1,118 Discord servers
+      • 👥 Used by 447,000 Discord users across all servers
+
+    `,
+    techStack: ["Node.js", "Discord.js", "Express", "Tailwind CSS"],
     keyFeatures: [
-      "User authentication",
-      "Post creation and sharing",
-      "Real-time notifications",
-      "User profiles",
-      "Social interactions",
-      "Focus on user experience and performance",
+      "🎧 Listen to Radio Prambors live directly on Discord",
+      "📈 Tracks server and user statistics",
+      "🎵 Search and view song lyrics using Genius API",
     ],
-    image: "/social-media-app-interface.png",
+    whatILearned: [
+      "Building a Discord bot with Node.js and Discord.js",
+      "Integrating external APIs such as Genius for song lyrics",
+      "Web scraping using axios and cheerio",
+      "Deploying and maintaining a live bot across multiple servers",
+      "Hosting and managing the bot on Heroku for continuous streaming and uptime",
+      "Writing code for real-world use cases, starting from a personal project to one used by thousands of user",
+      "Problem-solving and debugging based on user feedback"
+    ],
+    additionalList: [
+      { label: "!prambors info", value: "Displays information about this bot" },
+      { label: "!prambors help", value: "Shows all available commands" },
+      { label: "!prambors play", value: "Bot joins your voice channel and starts streaming Radio Prambors" },
+      { label: "!prambors leave", value: "Makes the bot leave your voice channel" },
+      { label: "!prambors lirik <judul>", value: "Searches for song lyrics using the Genius API" },
+      { label: "!prambors invite", value: "Provides the invite link for this bot" },
+      { label: "!prambors jadwal", value: "Displays the show schedule of Prambors Radio Jakarta" },
+      { label: "!prambors ping", value: "Displays the bot's current ping" },
+    ],
+    image: "/prambors-supportserver.png",
     gallery: [
-      { type: "image", src: "/social-media-app-interface.png", alt: "Feed", title: "Social Feed" },
-      { type: "image", src: "/user-profile-social-media.jpg", alt: "Profile", title: "User Profile" },
-      { type: "image", src: "/social-media-notifications.jpg", alt: "Notifications", title: "Notifications" },
+      { type: "image", src: "/prambors-info.png", alt: "Display Bot Statistics", title: "Display Bot Statistics" },
+      { type: "image", src: "/prambors-lirik.png", alt: "Search Song Lyrics Command", title: "Search Song Lyrics Command" },
+      { type: "image", src: "/prambors-help.png", alt: "Display All Bot Commands", title: "Display All Bot Commands" },
+      { type: "image", src: "/prambors-play.png", alt: "Play Radio Command", title: "Play Radio Command" },
+      { type: "image", src: "/prambors-leave.png", alt: "Leave Voice Command", title: "Leave Voice Command" },
+      { type: "image", src: "/prambors-jadwal.png", alt: "Displaying the show list schedule", title: "Displaying the show list schedule" },
     ],
-    year: 2024,
+    year: 2018,
     role: "Full Stack Developer",
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 6,
-    title: "AI Chat Interface",
-    description: "Intelligent chatbot interface powered by AI with natural language processing and context awareness.",
-    longDescription:
-      "An advanced AI-powered chat interface that leverages OpenAI's language models for intelligent conversations. Built with Next.js and the AI SDK, featuring context awareness, conversation history, and a clean, intuitive user interface.",
-    techStack: [ "Next.js", "AI SDK", "OpenAI", "Tailwind CSS" ],
-    keyFeatures: [
-      "Context awareness",
-      "Conversation history",
-      "Clean and intuitive user interface",
-      "Powered by OpenAI's language models",
-    ],
-    image: "/ai-chat-interface.png",
-    gallery: [
-      { type: "image", src: "/ai-chat-interface.png", alt: "Chat interface", title: "Chat Interface" },
-      { type: "image", src: "/ai-chatbot-conversation.png", alt: "Conversation", title: "Conversation View" },
-      { type: "image", src: "/chat-history-messages.jpg", alt: "History", title: "Chat History" },
-    ],
-    year: 2024,
-    role: "Full Stack Developer",
-    link: "#",
-    github: "#",
+    link: "http://discord.gg/PqPwy34",
+    github: "https://github.com/SiEncan/prambors-discord-bot",
   },
 ]

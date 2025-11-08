@@ -19,13 +19,19 @@ export function Projects() {
             <Link
               key={project.id}
               href={`/projects/${project.id}`}
-              className="group rounded-lg border border-border overflow-hidden hover:border-primary/50 transition-colors"
+              className="group relative rounded-lg border border-border overflow-hidden hover:border-primary/50 transition-colors"
             >
+              <span className="absolute bottom-3 right-3 bg-primary text-white text-[10px] font-semibold px-2 py-0.5 rounded z-10">
+                {project.year}
+              </span>
+
               <div className="relative overflow-hidden bg-muted h-48">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className={`w-full h-full object-cover ${project.title === "T-Cash" ? "object-[0_30%]" : ""} group-hover:scale-105 transition-transform duration-300`}
+                  className={`w-full h-full object-cover ${
+                    project.title === "T-Cash" ? "object-[0_30%]" : ""
+                  } group-hover:scale-105 transition-transform duration-300`}
                 />
               </div>
 
@@ -37,7 +43,10 @@ export function Projects() {
 
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tag) => (
-                    <span key={tag} className="px-3 py-1 bg-muted text-foreground/70 text-xs rounded-full">
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-muted text-foreground/70 text-xs rounded-full"
+                    >
                       {tag}
                     </span>
                   ))}

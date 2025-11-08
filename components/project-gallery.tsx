@@ -38,10 +38,11 @@ export function ProjectGallery({ items, title }: ProjectGalleryProps) {
       <div
         className={`grid gap-4 ${
           title.includes("T-Cash")
-            ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-w-5xl"
+            ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-w-5xl" : 
+            title.includes("Prambors") ? "mx-auto grid-cols-3 md:grid-cols-3 lg:grid-cols-3 max-w-lg"
             : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         }`}
-      >
+        >
         {featuredItems.map((item, index) => (
           <button
             key={index}
@@ -135,7 +136,7 @@ export function ProjectGallery({ items, title }: ProjectGalleryProps) {
             <ChevronLeft size={32} />
           </button>
 
-          <div className={`w-full ${title.includes('T-Cash') ? 'max-w-[75vw] md:max-w-md lg:max-w-lg mx-auto' : 'max-w-[95vw] md:max-w-[90vw] lg:max-w-[80vw]'}`}>
+          <div className="max-w-full max-h-full mx-8 flex flex-col items-center">
             <div className="relative w-full flex items-center justify-center">
               {items[selectedIndex].type === "image" ? (
                 <>
@@ -148,7 +149,7 @@ export function ProjectGallery({ items, title }: ProjectGalleryProps) {
                     src={items[selectedIndex].src}
                     alt={items[selectedIndex].alt}
                     onLoad={() => setIsLoading(false)}
-                    className={`w-full h-auto rounded-lg transition-opacity duration-300 ${
+                    className={`w-full max-h-[80vh] object-contain rounded-lg transition-opacity duration-300 ${
                       isLoading ? "opacity-0" : "opacity-100"
                     }`}
                   />

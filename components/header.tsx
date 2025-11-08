@@ -9,14 +9,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div className="text-2xl font-bold text-foreground">Portfolio</div>
+        <a href="/" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">Portfolio</a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8">
-          <a href="#projects" className="text-foreground/70 hover:text-foreground transition-colors">
-            Projects
+          <a href="/#projects" className="text-foreground/70 hover:text-foreground transition-colors">
+            Project
           </a>
-          <a href="#contact" className="text-foreground/70 hover:text-foreground transition-colors">
+          <a href="/#contact" className="text-foreground/70 hover:text-foreground transition-colors">
             Contact
           </a>
         </div>
