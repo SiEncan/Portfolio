@@ -5,8 +5,8 @@ import { RotatingTechStack } from "./rotating-tech-stack"
 export function Hero() {
   return (
     <section className="bg-gradient-to-tr from-background via-background to-accent/30 relative overflow-hidden">
-      <div className="absolute top-20 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-accent/10 rounded-full hidden md:block blur-3xl z-10" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full hidden md:block blur-3xl z-10" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-32">
         <div className="grid grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
