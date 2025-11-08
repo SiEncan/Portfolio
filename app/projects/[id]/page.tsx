@@ -116,7 +116,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {project.keyFeatures && project.keyFeatures.length > 0 && (
           <div className="mb-8 md:mb-12">
             <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-4">⚙️ Key Features</h2>
-            <ul className={`space-y-1.5 ${ project.keyFeatures.length > 4 ? "columns-2 md:columns-2" : "columns-1"}`}
+            <ul className={`space-y-1 ${ project.keyFeatures.length > 4 ? "columns-1 md:columns-2" : "columns-1"}`}
             >
               {project.keyFeatures.map((feature, index) => (
                 <li key={index} className="text-xs md:text-base break-inside-avoid flex items-start gap-2">
