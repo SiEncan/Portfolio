@@ -167,10 +167,10 @@ export const projects: Project[] = [
       "⏰ Automated scheduling and booking status updates",
       "💰 Basic financial tracking and monthly customer statistics",
       "🔐 Login and account management with Firebase",
-      "🖼️ Clean and elegant white–pink user interface",
+      "🖼️ Clean and elegant white-pink user interface",
       "📱 Fully responsive design for all screen sizes",
     ],
-    techStack: ["React", "Vite", "Tailwind CSS", "Firebase", "EsLint"],
+    techStack: ["JavaScript", "React", "Vite", "Tailwind CSS", "Firebase", "EsLint"],
     image: "/angelic-home.png",
     gallery: [
       { type: "image", src: "/angelic-login.png", alt: "Login Page", title: "Login Page" },
@@ -257,7 +257,7 @@ As this project was created during my <strong>second semester</strong>, it mainl
       • 👥 Used by 447,000 Discord users across all servers
 
     `,
-    techStack: ["Node.js", "Discord.js", "Express", "Tailwind CSS"],
+    techStack: ["JavaScript", "Node.js", "Discord.js", "Express", "Tailwind CSS"],
     keyFeatures: [
       "🎧 Listen to Radio Prambors live directly on Discord",
       "📈 Tracks server and user statistics",

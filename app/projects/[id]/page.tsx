@@ -209,6 +209,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   "tailwindcss": "tailwindcss",
                   "typescript": "typescript",
                   "postgresql": "postgresql",
+                  "javascript": "javascript",
                   "prisma": "prisma",
                   "flutter": "flutter",
                   "firebase": "firebase",

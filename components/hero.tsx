@@ -24,7 +24,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-4">
+            <div className="flex flex-wrap gap-3">
               <a
                 href="#projects"
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all font-medium hover:shadow-lg hover:shadow-primary/20"
@@ -39,10 +39,10 @@ export function Hero() {
               </a>
             </div>
 
-            <div className="pt-8 space-y-3">
+            <div className="pt-4 space-y-3">
               <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wider">Tech Stack</p>
               <div className="flex flex-wrap gap-2">
-                {["React", "Next.js", "TypeScript", "Node.js", "Tailwind"].map((tech) => (
+                {["TypeScript", "React", "Next.js", "Node.js", "Tailwind CSS"].map((tech) => (
                   <span
                     key={tech}
                     className="px-3 py-1 bg-primary/5 text-primary text-sm rounded-full border border-primary/10 font-medium"
