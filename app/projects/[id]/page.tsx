@@ -46,11 +46,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <main className="min-h-screen bg-gray-50">
       <Header />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 shadow-md rounded-lg m-6 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-12 shadow-md rounded-lg m-6 bg-white">
         {/* Back Button */}
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8"
+          className="text-sm md:text-base inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6 md:mb-8"
         >
           <ArrowLeft size={20} />
           Back to Projects
@@ -58,8 +58,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Project Title Section */}
         <div className="mb-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">{project.title}</h1>
-          <p className="text-lg text-foreground/70">{project.description}</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">{project.title}</h1>
+          <p className="text-sm md:text-lg text-foreground/70">{project.description}</p>
         </div>
 
         {/* Action Buttons */}
@@ -89,13 +89,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Featured Image */}
-        <div className={`mb-12 rounded-lg overflow-hidden bg-muted ${
+        <div className={`mb-8 md:mb-12 rounded-lg overflow-hidden bg-muted ${
           project.title.includes('T-Cash') ? 'max-w-xs mx-auto' : project.title.includes('Prambors') ? 'max-w-lg mx-auto' : ''}`}>
           <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-auto" />
         </div>
 
         {/* Meta Info */}
-        <div className="flex flex-wrap gap-8 text-sm text-foreground/60 mb-12 pb-12 border-b border-border">
+        <div className="flex flex-wrap gap-8 text-sm text-foreground/60 mb-8 md:mb-12 pb-8 md:pb-12 border-b border-border">
           <div>
             <span className="font-semibold text-foreground block mb-1">Year</span>
             {project.year}
@@ -107,19 +107,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         {/* Description Section */}
-        <div className="mb-12 border-b pb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">✨ Description</h2>
-          <p className="whitespace-pre-line text-foreground/80 leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: project.longDescription }}/>
+        <div className="mb-8 md:mb-12 border-b pb-8">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">✨ Description</h2>
+          <p className="text-sm md:text-base whitespace-pre-line text-foreground/80 leading-relaxed" dangerouslySetInnerHTML={{ __html: project.longDescription }}/>
         </div>
 
         {/* Key Features */}
         {project.keyFeatures && project.keyFeatures.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-foreground mb-4">⚙️ Key Features</h2>
+          <div className="mb-8 md:mb-12">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-4">⚙️ Key Features</h2>
             <ul className={`space-y-1.5 ${ project.keyFeatures.length > 4 ? "columns-2 md:columns-2" : "columns-1"}`}
             >
               {project.keyFeatures.map((feature, index) => (
-                <li key={index} className="break-inside-avoid flex items-start gap-2">
+                <li key={index} className="text-xs md:text-base break-inside-avoid flex items-start gap-2">
                   <span className="text-primary font-bold mt-0.5">•</span>
                   <span className="text-foreground/80">{feature}</span>
                 </li>
@@ -134,15 +134,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <table className="min-w-full border border-gray-200 divide-y divide-gray-200">
               <thead className="bg-gray-100">
                 <tr>
-                  <th className="px-4 py-2 text-left text-gray-700 font-semibold">Label</th>
-                  <th className="px-4 py-2 text-left text-gray-700 font-semibold">Description</th>
+                  <th className="text-sm md:text-base px-4 py-2 text-left text-gray-700 font-semibold">Label</th>
+                  <th className="text-sm md:text-base px-4 py-2 text-left text-gray-700 font-semibold">Description</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {project.additionalList.map((item, idx) => (
                   <tr key={idx}>
-                    <td className="px-4 py-2 font-mono text-gray-900">{item.label}</td>
-                    <td className="px-4 py-2 text-gray-700">{item.value}</td>
+                    <td className="text-xs md:text-base px-4 py-2 font-mono text-gray-900">{item.label}</td>
+                    <td className="text-xs md:text-base px-4 py-2 text-gray-700">{item.value}</td>
                   </tr>
                 ))}
               </tbody>
@@ -152,11 +152,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* What i Built */}
         {project.whatIBuilt && project.keyFeatures.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-foreground mb-4">🔧 What I Built</h2>
+          <div className="mb-8 md:mb-12">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-4">🔧 What I Built</h2>
             <ul className="columns-1 md:columns-2 space-y-1">
               {project.whatIBuilt.map((built, index) => (
-                <li key={index} className="break-inside-avoid flex items-start gap-2">
+                <li key={index} className="text-xs md:text-base break-inside-avoid flex items-start gap-2">
                   <span className="text-primary font-bold mt-0.5">•</span>
                   <span className="text-foreground/80" dangerouslySetInnerHTML={{ __html: built }}/>
                 </li>
@@ -167,12 +167,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* What i Learned */}
         {project.whatILearned && project.keyFeatures.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-foreground mb-2">🧠 What I Learned</h2>
-            <p className="mb-3 font-medium">Through building {project.title}, I gained practical experience in:</p>
+          <div className="mb-8 md:mb-12">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">🧠 What I Learned</h2>
+            <p className=" text-xs md:text-base mb-3 font-medium">Through building {project.title}, I gained practical experience in:</p>
             <ul className="columns-1 space-y-0.75">
               {project.whatILearned.map((learned, index) => (
-                <li key={index} className="break-inside-avoid flex items-start gap-2">
+                <li key={index} className="text-xs md:text-base break-inside-avoid flex items-start gap-2">
                   <span className="text-primary font-bold mt-0.5">•</span>
                   <span className="text-foreground/80" dangerouslySetInnerHTML={{ __html: learned }}/>
                 </li>
@@ -184,11 +184,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Goals */}
         {project.goals && project.keyFeatures.length > 0 && (
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-foreground mb-2">🧩 Project Goals</h2>
-            <p className="mb-3 font-medium">This project was created primarily for learning purposes, focusing on:</p>
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">🧩 Project Goals</h2>
+            <p className="text-sm md:text-base mb-3 font-medium">This project was created primarily for learning purposes, focusing on:</p>
             <ul className="columns-1 space-y-1">
               {project.goals.map((goal, index) => (
-                <li key={index} className="break-inside-avoid flex items-start gap-2">
+                <li key={index} className="text-xs md:text-base break-inside-avoid flex items-start gap-2">
                   <span className="text-primary font-bold mt-0.5">•</span>
                   <span className="text-foreground/80" dangerouslySetInnerHTML={{ __html: goal }}/>
                 </li>
@@ -199,8 +199,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         {/* Tech Stack Section */}
         {project.techStack && project.techStack.length > 0 && (
-          <div className="mb-12 pb-12 border-b-2 border-gray-200">
-            <h2 className="text-2xl font-bold text-foreground mb-4">🧰 Tech Stack</h2>
+          <div className="mb-8 md:mb-12 pb-8 md:pb-12 border-b-2 border-gray-200">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">🧰 Tech Stack</h2>
             <div className="flex flex-wrap gap-4 items-center">
               {project.techStack.map((tech, index) => {
                 const techName = tech.toLowerCase().replace(/\s+/g, "")
@@ -228,12 +228,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 return (
                   <div
                     key={index}
-                    className="flex items-center gap-2 border border-border px-3 py-1.5 rounded-lg bg-muted/30 hover:bg-muted/50 transition"
+                    className="flex items-center gap-2 border border-border px-1.5 md:px-3 py-0.75 md:py-1.5 rounded-lg bg-muted/30 hover:bg-muted/50 transition"
                   >
                     <img
                       src={iconUrl}
                       alt={tech}
-                      className="w-5 h-5 object-contain"
+                      className="w-4 md:w-5 h-4 md:h-5 object-contain"
                     />
                     <span className="text-sm text-foreground font-medium">{tech}</span>
                   </div>
@@ -246,8 +246,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Gallery Section */}
         <div className="space-y-6">
           <div>
-            <h2 className="text-2xl font-bold text-foreground mb-2">📸 Gallery</h2>
-            <p className="text-foreground/70">Click on any image or video to view in full screen</p>
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-2">📸 Gallery</h2>
+            <p className="text-sm md:text-base text-foreground/70">Click on any image or video to view in full screen</p>
           </div>
           <ProjectGallery items={project.gallery} title={project.title} />
         </div>

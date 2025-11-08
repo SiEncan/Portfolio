@@ -27,8 +27,8 @@ export function Contact() {
     <section id="contact" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
       <div className="space-y-12">
         <div className="space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">Let's Connect</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl">
+          <h2 className="text-3xl md:text-4xl md:text-5xl font-bold text-foreground">Let's Connect</h2>
+          <p className="text-md md:text-lg text-foreground/70 max-w-2xl">
             Have a project in mind or want to collaborate? I'd love to hear from you. Get in touch and let's create
             something amazing together.
           </p>

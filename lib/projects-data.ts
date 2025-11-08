@@ -36,15 +36,15 @@ export const projects: Project[] = [
       This project was developed as a personal learning project to explore full-stack web development concepts, focusing on real-world booking systems, database modeling, and payment integration. The main goal of this project is to learn and apply modern web development practices using Next.js and TypeScript while simulating a realistic SaaS-like platform architecture.
       `,
     keyFeatures: [
-      "🏐 Browse and book available sports fields",
-      "📅 Dynamic time slot management with real-time updates",
-      "💳 Secure payments via Midtrans",
-      "🧾 Admin dashboard for managing venues and schedules",
-      "🧍 Role-based authentication for owners and customers",
-      "👥 Multi-owner support - Multiple owners can manage their own fields independently.",
-      "📧 Email verification - Integrated Nodemailer to verify user accounts and reduce spam bookings.",
-      "🔑 Google Sign-In - Enabled seamless login without manual registration for a smoother user experience.",
-      "💾 Local storage booking persistence - Preserves ongoing bookings even after page reloads or interruptions, improving user experience."
+      "Browse and book available sports fields",
+      "Dynamic time slot management with real-time updates",
+      "Secure payments via Midtrans",
+      "Admin dashboard for managing venues and schedules",
+      "Role-based authentication for owners and customers",
+      "Multi-owner support - Multiple owners can manage their own fields independently.",
+      "Email verification - Integrated Nodemailer to verify user accounts and reduce spam bookings.",
+      "Google Sign-In - Enabled seamless login without manual registration for a smoother user experience.",
+      "Local storage booking persistence - Preserves ongoing bookings even after page reloads or interruptions, improving user experience."
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
     whatIBuilt: [
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     gallery: [
       { type: "image", src: "/arenaku-home.png", alt: "Home Page", title: "Home Page" },
       { type: "image", src: "/arenaku-login.png", alt: "Login Page", title: "Login Page" },
-      { type: "image", src: "/arenaku-alurbooking.gif", alt: "Alur Booking", title: "Alur Booking" },
+      { type: "video", src: "/arenaku-alurbooking.mp4", alt: "Alur Booking", title: "Alur Booking (Video)" },
       { type: "image", src: "/arenaku-carivenue.png", alt: "Cari Venue", title: "Cari Venue" },
       { type: "image", src: "/arenaku-viewvenue1.png", alt: "Lihat Venue", title: "Lihat Venue" },
       { type: "image", src: "/arenaku-pilihbooking.png", alt: "Pilih Jadwal", title: "Pilih Jadwal" },
@@ -94,14 +94,14 @@ export const projects: Project[] = [
     The project emphasizes <strong>secure financial transactions</strong>, <strong>clean interface design</strong>, and <strong>smooth user interaction</strong> — bringing together key mobile app concepts such as authentication, state management, and data persistence.  
     Beyond its core functionality, T-Cash also serves as a milestone in my journey to mastering <strong>Flutter development</strong> and building scalable, user-centered mobile applications.`,
     keyFeatures: [
-      "💰 Display user wallet balance in real-time",
-      "💸 Top-up and transfer functionality",
-      "💳 Transfer funds to other users via QR code scanning",
-      "🔐 Secure payments with a payment passcode required for transfers or purchases",
-      "🛒 Purchase digital items such as mobile pulsa, internet quota, electricity tokens, and other e-wallet top-ups",
-      "📊 Track spending with income/expense statistics and graphical insights",
-      "🧾 View complete transaction history",
-      "👤 Manage personal profile and account details",
+      "Display user wallet balance in real-time",
+      "Top-up and transfer functionality",
+      "Transfer funds to other users via QR code scanning",
+      "Secure payments with a payment passcode required for transfers or purchases",
+      "Purchase digital items such as mobile pulsa, internet quota, electricity tokens, and other e-wallet top-ups",
+      "Track spending with income/expense statistics and graphical insights",
+      "View complete transaction history",
+      "Manage personal profile and account details",
     ],
     techStack: ["Flutter", "Dart", "Firebase"],
     whatILearned: [
@@ -254,9 +254,7 @@ As this project was created during my <strong>second semester</strong>, it mainl
 
     Initially, this bot was for personal use with my friends in a private Discord server. However, it quickly gained interest and eventually:
       • 📌 Deployed in 1,118 Discord servers
-      • 👥 Used by 447,000 Discord users across all servers
-
-    `,
+      • 👥 Used by 447,000 Discord users across all servers`,
     techStack: ["JavaScript", "Node.js", "Discord.js", "Express", "Tailwind CSS"],
     keyFeatures: [
       "🎧 Listen to Radio Prambors live directly on Discord",
