@@ -5,7 +5,7 @@ import { projects } from "@/lib/projects-data"
 
 export function Projects() {
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+    <section id="projects" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-8">
       <div className="space-y-12">
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">Featured Projects</h2>
