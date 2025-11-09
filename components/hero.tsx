@@ -124,7 +124,7 @@ export function Hero() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="space-y-2 pt-4"
               >
-              <p className="text-sm font-semibold text-foreground/60 uppercase tracking-wider">Tech Stack</p>
+              <p className="text-sm font-medium text-foreground/60 tracking-wider">My Tech Stack & Tools</p>
               <RotatingTechStack />
             </motion.div>
           </div>
