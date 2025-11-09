@@ -113,7 +113,7 @@ export const projects: Project[] = [
     image: "/tcash-welcome.png",
     gallery: [
       { type: "image", src: "/tcash-welcome.png", alt: "Welcome Screen", title: "Welcome Screen" },
-      { type: "image", src: "/tcash-transferqr.gif", alt: "QR Transfer", title: "QR Transfer" },
+      { type: "video", src: "/tcash-transferqr.mp4", alt: "QR Transfer", title: "QR Transfer (Video)" },
       { type: "image", src: "/tcash-transactiondetails.png", alt: "Transaction Details", title: "Transaction Details Modal" },
       { type: "image", src: "/tcash-login.png", alt: "Login Screen", title: "Login Screen" },
       { type: "image", src: "/tcash-resetpassword.png", alt: "Reset Password", title: "Reset Password" },
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     image: "/angelic-home.png",
     gallery: [
       { type: "image", src: "/angelic-login.png", alt: "Login Page", title: "Login Page" },
-      { type: "image", src: "/angelic-alurbooking.gif", alt: "Alur Booking", title: "Alur Booking (GIF)" },
+      { type: "video", src: "/angelic-alurbooking.mp4", alt: "Alur Booking", title: "Alur Booking (Video)" },
       { type: "image", src: "/angelic-dashboard.png", alt: "Admin - Main Dashboard", title: "Admin - Main Dashboard" },
       { type: "image", src: "/angelic-bookings.png", alt: "Admin - Booking History", title: "Admin - Booking History" },
       { type: "image", src: "/angelic-changestatus.gif", alt: "Change Booking Status", title: "Change Booking Status (GIF)" },
