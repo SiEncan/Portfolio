@@ -123,7 +123,9 @@ function Chip({ techGroup }: { techGroup: string[] }) {
 
   return (
     <motion.div
-      className="will-change-transform my-auto flex items-center gap-2 px-2.5 md:px-3 py-1.5 bg-primary/5 text-primary text-xs md:text-sm rounded-full border border-primary/10 font-medium select-none"
+      className="will-change-transform my-auto flex items-center gap-2 px-2.5 md:px-3 py-1.5 bg-primary/5 text-primary 
+        text-xs md:text-sm rounded-full shadow-sm 
+        shadow-primary/20 border-primary/10 font-medium select-none"
       style={{ transformOrigin: "center", perspective: 600 }}
       animate={{
         rotateX: isAnimating ? 180 : 0,

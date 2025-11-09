@@ -162,13 +162,13 @@ export const projects: Project[] = [
 
                       The app also includes a Firebase-based login system and an admin dashboard for managing hairstylists, schedules, and service listings.`,
     keyFeatures: [
-      "🧾 Online salon service booking system",
-      "👩‍🎨 Hairstylist selection with availability indicators",
-      "⏰ Automated scheduling and booking status updates",
-      "💰 Basic financial tracking and monthly customer statistics",
-      "🔐 Login and account management with Firebase",
-      "🖼️ Clean and elegant white-pink user interface",
-      "📱 Fully responsive design for all screen sizes",
+      "Online salon service booking system",
+      "Hairstylist selection with availability indicators",
+      "Automated scheduling and booking status updates",
+      "Basic financial tracking and monthly customer statistics",
+      "Login and account management with Firebase",
+      "Clean and elegant white-pink user interface",
+      "Fully responsive design for all screen sizes",
     ],
     techStack: ["JavaScript", "React", "Vite", "Tailwind CSS", "Firebase", "EsLint"],
     image: "/angelic-home.png",
@@ -213,8 +213,8 @@ As this project was created during my <strong>second semester</strong>, it mainl
                           - Authentication and route protection  
                           - Blade templating for frontend rendering`,
     techStack: [ "Laravel", "PHP", "MySQL", "Blade Template", "Tailwind CSS" ],
-    keyFeatures: ["💬 Create and reply to discussion threads", "🔐 Basic user authentication (login/register)", "✏️ Users can manage their own posts and comments (create, edit, delete)", 
-      "👤 Profile management with photo upload stored in local storage", "🎨 Clean and responsive Blade-based frontend"],
+    keyFeatures: ["Create and reply to discussion threads", "Basic user authentication (login/register)", "Users can manage their own posts and comments (create, edit, delete)", 
+      "Profile management with photo upload stored in local storage", "Clean and responsive Blade-based frontend"],
     whatILearned: [
       "Building RESTful applications with Laravel",
       "Implementing MVC (Model-View-Controller) structure",
