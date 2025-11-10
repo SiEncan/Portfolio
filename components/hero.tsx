@@ -49,14 +49,12 @@ export function Hero() {
                   >
                     Software{" "}
                   </motion.span>
-
-                  <span className="relative inline-block bg-gradient-to-r from-primary to-accent/60 bg-clip-text text-transparent">
+                  <span className="relative inline-block text-primary font-bold">
                     Engineer
                     <motion.span
-                      className="absolute inset-0 bg-clip-text text-transparent bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.5)_50%,transparent_100%)]"
-                      style={{
-                        backgroundSize: "300% 100%",
-                      }}
+                      className="absolute inset-0 
+                        bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.7)_40%,transparent_100%)] 
+                        bg-[length:200%_100%] bg-clip-text text-transparent"
                       animate={{
                         backgroundPosition: ["200% 0%", "-200% 0%"],
                       }}
