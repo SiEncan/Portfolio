@@ -212,7 +212,7 @@ As this project was created during my <strong>second semester</strong>, it mainl
                           - Database migration and seeding  
                           - Authentication and route protection  
                           - Blade templating for frontend rendering`,
-    techStack: [ "Laravel", "PHP", "MySQL", "Blade Template", "Tailwind CSS" ],
+    techStack: [ "Laravel", "PHP", "PostgreSQL", "Blade Template", "Tailwind CSS" ],
     keyFeatures: ["Create and reply to discussion threads", "Basic user authentication (login/register)", "Users can manage their own posts and comments (create, edit, delete)", 
       "Profile management with photo upload stored in local storage", "Clean and responsive Blade-based frontend"],
     whatILearned: [
@@ -221,7 +221,7 @@ As this project was created during my <strong>second semester</strong>, it mainl
       "Managing data with Eloquent ORM and migrations",
       "Setting up user authentication and middleware",
       "Designing simple yet consistent frontend layouts using Blade and Tailwind CSS",
-      "Connecting and structuring databases with MySQL"
+      "Connecting and structuring databases with PostgreSQL"
     ],
     image: "/tspace-login.png",
     gallery: [
