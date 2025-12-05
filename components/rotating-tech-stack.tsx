@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react"
 const TECH_STACK = [
   "JavaScript", "TypeScript", "React.js", "Next.js", "Tailwind CSS",
   "Flutter", "Dart", "PHP", "Laravel", "PostgreSQL", 
-  "MySQL", "Firebase", "Python", "Java", "MongoDB", 
+  "Firebase", "Python", "Java", "MongoDB", 
   "Git", "Node.js", "Prisma", "HTML", "CSS"
 ]
 
@@ -25,7 +25,6 @@ const ICON_MAP: Record<string, string> = {
   "react": "react",
   "laravel": "laravel",
   "php": "php",
-  "mysql": "mysql",
   "node.js": "nodejs",
   "discord.js": "discordjs",
   "bladetemplate": "laravel",

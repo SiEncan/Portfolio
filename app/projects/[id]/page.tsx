@@ -216,7 +216,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   "react": "react",
                   "laravel": "laravel",
                   "php": "php",
-                  "mysql": "mysql",
                   "node.js": "nodejs",
                   "discord.js": "discordjs",
                   "bladetemplate": "laravel",
